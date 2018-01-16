@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIButton.appearance().backgroundColor = UIColor(red:0.55, green:0.76, blue:0.29, alpha:1.0)
         UIButton.appearance().tintColor = UIColor.white
         UILabel.appearance().tintColor = UIColor.white
+        
         return true
     }
 

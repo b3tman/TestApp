@@ -20,6 +20,8 @@
 		F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */; };
 		F2DC20CA200E8D6B00425957 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C9200E8D6B00425957 /* MapViewController.swift */; };
 		F2DC20CC200E992300425957 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20CB200E992300425957 /* SWRevealViewController.m */; };
+		F2DC20D0200EA2A500425957 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20CE200EA2A500425957 /* PhotoCollectionViewCell.swift */; };
+		F2DC20D3200EA95E00425957 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DC20D2200EA95E00425957 /* PhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		F2DC20C9200E8D6B00425957 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F2DC20CB200E992300425957 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		F2DC20CE200EA2A500425957 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2DC20D2200EA95E00425957 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		F2DC20C5200E8D1D00425957 /* PhotosCollectionVC */ = {
 			isa = PBXGroup;
 			children = (
+				F2DC20CD200EA27300425957 /* Cell */,
 				F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */,
 			);
 			path = PhotosCollectionVC;
@@ -186,6 +191,15 @@
 				F2DC20C9200E8D6B00425957 /* MapViewController.swift */,
 			);
 			path = MapVC;
+			sourceTree = "<group>";
+		};
+		F2DC20CD200EA27300425957 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2DC20CE200EA2A500425957 /* PhotoCollectionViewCell.swift */,
+				F2DC20D2200EA95E00425957 /* PhotoCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22E8B10200D1160004A0332 /* LaunchScreen.storyboard in Resources */,
+				F2DC20D3200EA95E00425957 /* PhotoCollectionViewCell.xib in Resources */,
 				F22E8B0D200D1160004A0332 /* Assets.xcassets in Resources */,
 				F22E8B08200D1160004A0332 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +285,7 @@
 				F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */,
 				F2DC20CC200E992300425957 /* SWRevealViewController.m in Sources */,
 				F2BA8048200DECA400217AB6 /* CustomSegmentedControl.swift in Sources */,
+				F2DC20D0200EA2A500425957 /* PhotoCollectionViewCell.swift in Sources */,
 				F2BA8046200DEC5E00217AB6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
