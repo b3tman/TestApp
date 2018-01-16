@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
         case loginTextField:
             return (text.count >= 6, "Your name is too short.")
         case enterPasswordTextField:
-            return (text.count >= 6, "Your password is too short.")
+            return (text.count >= 8, "Your password is too short.")
         case confirmPasswordTextField:
             return (text == enterPasswordTextField.text!, "Please, enter same password")
         default:
@@ -77,7 +77,29 @@ class RegisterViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        guard let url = URL(string: "http://junior.balinasoft.com/api/account/signup") else { return }
+        let parameters = ["login" : "\(loginTextField.text!)",
+                       "password" : "\(confirmPasswordTextField.text!)"]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+        request.httpBody = httpBody
         
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) { (data, response, error) in
+            //            if let response = response {
+            //                print(response)
+            //            }
+            guard let data = data else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+            }.resume()
     }
     
     

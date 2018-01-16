@@ -65,7 +65,6 @@
 				F22E8B17200D3634004A0332 /* Logic */,
 				F22E8B18200D363E004A0332 /* Modules */,
 				F22E8B19200D3646004A0332 /* Supporting files */,
-				F22E8B06200D1160004A0332 /* Main.storyboard */,
 				F22E8B09200D1160004A0332 /* TestApp.xcdatamodeld */,
 			);
 			path = TestApp;
@@ -81,10 +80,11 @@
 		F22E8B18200D363E004A0332 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F2DC20BB200E170A00425957 /* MainStoryboard */,
+				F2DC20BC200E172600425957 /* SegmentedControl */,
 				F2BA8044200DEC4900217AB6 /* MainViewController */,
-				F22E8B1B200D3699004A0332 /* RegisterViewController */,
 				F22E8B1A200D3680004A0332 /* LoginViewController */,
-				F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */,
+				F22E8B1B200D3699004A0332 /* RegisterViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -122,6 +122,22 @@
 				F2BA8045200DEC5E00217AB6 /* MainViewController.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		F2DC20BB200E170A00425957 /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				F22E8B06200D1160004A0332 /* Main.storyboard */,
+			);
+			path = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		F2DC20BC200E172600425957 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -36,6 +36,29 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {
         
+        guard let url = URL(string: "http://junior.balinasoft.com/api/account/signin") else { return }
+        let parameters = ["login" : "\(loginTextField.text!)",
+                       "password" : "\(passwordTextField.text!)"]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) { (data, response, error) in
+            //            if let response = response {
+            //                print(response)
+            //            }
+            guard let data = data else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+            }.resume()
     }
     
     
@@ -49,7 +72,7 @@ class LoginViewController: UIViewController {
         case loginTextField:
             return (text.count >= 6, "Your name is too short.")
         case passwordTextField:
-            return (text.count >= 6, "Your password is too short.")
+            return (text.count >= 8, "Your password is too short.")
         default:
             return (text.count > 0, "This field cannot be empty.")
         }
