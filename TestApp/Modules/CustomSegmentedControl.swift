@@ -33,7 +33,7 @@ class CustomSegmentedControl: UISegmentedControl {
         let font = UIFont.systemFont(ofSize: 16.0)
         
         let normalTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor.black,
+            NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.font: font
         ]
         
