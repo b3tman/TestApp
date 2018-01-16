@@ -16,7 +16,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if self.revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))

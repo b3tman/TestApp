@@ -206,7 +206,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="0Cp-se-h2H" kind="custom" trigger="accessoryAction" customClass="SWRevealViewControllerSeguePushController" id="CRa-Cp-DLJ"/>
+                                            <segue destination="0Cp-se-h2H" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="nw8-wH-AN0"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="8IR-TN-ZlI">
@@ -248,7 +248,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8f-f9-Rpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="501"/>
+            <point key="canvasLocation" x="2252" y="179"/>
         </scene>
         <!--Photos Collection View Controller-->
         <scene sceneID="orx-4O-ION">
@@ -418,7 +418,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CRa-Cp-DLJ"/>
+        <segue reference="nw8-wH-AN0"/>
         <segue reference="R5i-OS-JaS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,10 +16,10 @@
 		F2BA8046200DEC5E00217AB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA8045200DEC5E00217AB6 /* MainViewController.swift */; };
 		F2BA8048200DECA400217AB6 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */; };
 		F2BA804B200DEE4600217AB6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA804A200DEE4600217AB6 /* RegisterViewController.swift */; };
-		F2DC20C1200E833B00425957 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20BF200E833B00425957 /* SWRevealViewController.m */; };
 		F2DC20C4200E8BC400425957 /* SlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C3200E8BC400425957 /* SlideMenuTableViewController.swift */; };
 		F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */; };
 		F2DC20CA200E8D6B00425957 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C9200E8D6B00425957 /* MapViewController.swift */; };
+		F2DC20CC200E992300425957 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20CB200E992300425957 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +35,11 @@
 		F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		F2BA804A200DEE4600217AB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F2DC20BE200E833A00425957 /* TestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		F2DC20BF200E833B00425957 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F2DC20C0200E833B00425957 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F2DC20C3200E8BC400425957 /* SlideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewController.swift; sourceTree = "<group>"; };
 		F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		F2DC20C9200E8D6B00425957 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F2DC20CB200E992300425957 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F2DC20C0200E833B00425957 /* SWRevealViewController.h */,
-				F2DC20BF200E833B00425957 /* SWRevealViewController.m */,
+				F2DC20CB200E992300425957 /* SWRevealViewController.m */,
 				F2DC20BE200E833A00425957 /* TestApp-Bridging-Header.h */,
 			);
 			path = SWRevealViewController;
@@ -261,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2DC20C1200E833B00425957 /* SWRevealViewController.m in Sources */,
 				F22E8B1D200D36C9004A0332 /* LoginViewController.swift in Sources */,
 				F2DC20C4200E8BC400425957 /* SlideMenuTableViewController.swift in Sources */,
 				F2DC20CA200E8D6B00425957 /* MapViewController.swift in Sources */,
@@ -269,6 +268,7 @@
 				F22E8B03200D1160004A0332 /* AppDelegate.swift in Sources */,
 				F2BA804B200DEE4600217AB6 /* RegisterViewController.swift in Sources */,
 				F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */,
+				F2DC20CC200E992300425957 /* SWRevealViewController.m in Sources */,
 				F2BA8048200DECA400217AB6 /* CustomSegmentedControl.swift in Sources */,
 				F2BA8046200DEC5E00217AB6 /* MainViewController.swift in Sources */,
 			);
