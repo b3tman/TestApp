@@ -79,7 +79,7 @@ class RegisterViewController: UIViewController {
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         guard let url = URL(string: "http://junior.balinasoft.com/api/account/signup") else { return }
         let parameters = ["login" : "\(loginTextField.text!)",
-                       "password" : "\(confirmPasswordTextField.text!)"]
+            "password" : "\(confirmPasswordTextField.text!)"]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -89,9 +89,6 @@ class RegisterViewController: UIViewController {
         let session = URLSession.shared
         
         session.dataTask(with: request) { (data, response, error) in
-            //            if let response = response {
-            //                print(response)
-            //            }
             guard let data = data else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])

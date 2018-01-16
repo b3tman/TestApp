@@ -48,9 +48,6 @@ class LoginViewController: UIViewController {
         let session = URLSession.shared
         
         session.dataTask(with: request) { (data, response, error) in
-            //            if let response = response {
-            //                print(response)
-            //            }
             guard let data = data else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])

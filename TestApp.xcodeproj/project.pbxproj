@@ -16,6 +16,10 @@
 		F2BA8046200DEC5E00217AB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA8045200DEC5E00217AB6 /* MainViewController.swift */; };
 		F2BA8048200DECA400217AB6 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */; };
 		F2BA804B200DEE4600217AB6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA804A200DEE4600217AB6 /* RegisterViewController.swift */; };
+		F2DC20C1200E833B00425957 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20BF200E833B00425957 /* SWRevealViewController.m */; };
+		F2DC20C4200E8BC400425957 /* SlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C3200E8BC400425957 /* SlideMenuTableViewController.swift */; };
+		F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */; };
+		F2DC20CA200E8D6B00425957 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC20C9200E8D6B00425957 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,12 @@
 		F2BA8045200DEC5E00217AB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F2BA8047200DECA400217AB6 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		F2BA804A200DEE4600217AB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F2DC20BE200E833A00425957 /* TestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F2DC20BF200E833B00425957 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		F2DC20C0200E833B00425957 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F2DC20C3200E8BC400425957 /* SlideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewController.swift; sourceTree = "<group>"; };
+		F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		F2DC20C9200E8D6B00425957 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,7 @@
 		F22E8B17200D3634004A0332 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				F2DC20BD200E82F300425957 /* SWRevealViewController */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -81,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				F2DC20BB200E170A00425957 /* MainStoryboard */,
+				F2DC20C2200E8B9800425957 /* SlideMenuTableVC */,
+				F2DC20C5200E8D1D00425957 /* PhotosCollectionVC */,
+				F2DC20C8200E8D5200425957 /* MapVC */,
 				F2DC20BC200E172600425957 /* SegmentedControl */,
 				F2BA8044200DEC4900217AB6 /* MainViewController */,
 				F22E8B1A200D3680004A0332 /* LoginViewController */,
@@ -140,6 +154,40 @@
 			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
+		F2DC20BD200E82F300425957 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2DC20C0200E833B00425957 /* SWRevealViewController.h */,
+				F2DC20BF200E833B00425957 /* SWRevealViewController.m */,
+				F2DC20BE200E833A00425957 /* TestApp-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		F2DC20C2200E8B9800425957 /* SlideMenuTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				F2DC20C3200E8BC400425957 /* SlideMenuTableViewController.swift */,
+			);
+			path = SlideMenuTableVC;
+			sourceTree = "<group>";
+		};
+		F2DC20C5200E8D1D00425957 /* PhotosCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				F2DC20C6200E8D3900425957 /* PhotosCollectionViewController.swift */,
+			);
+			path = PhotosCollectionVC;
+			sourceTree = "<group>";
+		};
+		F2DC20C8200E8D5200425957 /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				F2DC20C9200E8D6B00425957 /* MapViewController.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +220,7 @@
 				TargetAttributes = {
 					F22E8AFE200D1160004A0332 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -212,10 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DC20C1200E833B00425957 /* SWRevealViewController.m in Sources */,
 				F22E8B1D200D36C9004A0332 /* LoginViewController.swift in Sources */,
+				F2DC20C4200E8BC400425957 /* SlideMenuTableViewController.swift in Sources */,
+				F2DC20CA200E8D6B00425957 /* MapViewController.swift in Sources */,
 				F22E8B0B200D1160004A0332 /* TestApp.xcdatamodeld in Sources */,
 				F22E8B03200D1160004A0332 /* AppDelegate.swift in Sources */,
 				F2BA804B200DEE4600217AB6 /* RegisterViewController.swift in Sources */,
+				F2DC20C7200E8D3900425957 /* PhotosCollectionViewController.swift in Sources */,
 				F2BA8048200DECA400217AB6 /* CustomSegmentedControl.swift in Sources */,
 				F2BA8046200DEC5E00217AB6 /* MainViewController.swift in Sources */,
 			);
@@ -354,12 +407,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCKQL6T87N;
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = b3tman.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/Logic/SWRevealViewController/TestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,12 +425,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCKQL6T87N;
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = b3tman.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/Logic/SWRevealViewController/TestApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
