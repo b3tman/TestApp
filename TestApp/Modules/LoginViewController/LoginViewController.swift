@@ -10,7 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
     //MARK: - Outlets
     
     @IBOutlet weak var loginTextField: UITextField!
@@ -20,19 +19,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet var textFields: [UITextField]!
     
-    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logInButton.isEnabled = false
-        
         NotificationCenter.default.addObserver(self,
                                            selector: #selector(textDidChange(_:)),
                                                name: Notification.Name.UITextFieldTextDidChange,
                                              object: nil)
     }
+    
+    //MARK: - Actions
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {
         
@@ -58,9 +57,7 @@ class LoginViewController: UIViewController {
             }.resume()
     }
     
-    
-    
-    //MARK: - Private helpers methods
+    //MARK: - Private methods
     
     private func validate(_ textField: UITextField) -> (Bool, String?) {
         guard let text = textField.text else { return (false, nil) }
@@ -84,7 +81,6 @@ class LoginViewController: UIViewController {
         
         for textField in textFields {
             let (valid, _) = validate(textField)
-            
             guard valid else {
                 formIsValid = false
                 break
@@ -95,6 +91,7 @@ class LoginViewController: UIViewController {
     
 }
 
+//MARK: - Extension UITextFieldDelegate
 
 extension LoginViewController: UITextFieldDelegate {
     

@@ -12,13 +12,22 @@ private let reuseIdentifier = "Cell"
 
 class PhotosCollectionViewController: UICollectionViewController {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
+    //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
-        
+        enableSlideMenu()
+    }
+    
+    //MARK: - Private
+    
+    private func enableSlideMenu() {
         if self.revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -34,19 +43,18 @@ class PhotosCollectionViewController: UICollectionViewController {
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: UICollectionViewDataSource
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                   numberOfItemsInSection section: Int) -> Int {
         return 10
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView,
+                          cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                                      for: indexPath) as! PhotoCollectionViewCell
         
         cell.photoImageView.image = UIImage(named: "armin")
     
@@ -55,11 +63,13 @@ class PhotosCollectionViewController: UICollectionViewController {
 
 }
 
+    //MARK: - Extension UICollectionViewDelegateFlowLayout
+
 extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+             layout collectionViewLayout: UICollectionViewLayout,
+                 sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let cellWidth = screenWidth / 3 - 15

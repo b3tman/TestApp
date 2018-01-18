@@ -18,3 +18,4 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
 
 }
+
