@@ -20,11 +20,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var customSegmentedControl: CustomSegmentedControl!
     @IBOutlet weak var contentView: UIView!
     
+    //MARK: - Properties
     
     var currentViewController: UIViewController?
     
     lazy var loginVC: UIViewController? = {
         let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewControllerId")
+        
         return loginVC
     }()
     lazy var registerVC: UIViewController? = {
@@ -33,9 +35,7 @@ class MainViewController: UIViewController {
         return registerVC
     }()
     
-    
-    
-    // MARK: - View Controller Lifecycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +52,14 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Switching Tabs Functions
+    
     @IBAction func switchTabs(_ sender: UISegmentedControl) {
         self.currentViewController!.view.removeFromSuperview()
         self.currentViewController!.removeFromParentViewController()
-        
         displayCurrentTab(sender.selectedSegmentIndex)
     }
     
-    func displayCurrentTab(_ tabIndex: Int){
+    private func displayCurrentTab(_ tabIndex: Int){
         if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
             
             self.addChildViewController(vc)
@@ -71,7 +71,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
+    private func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
         var vc: UIViewController?
         switch index {
         case TabIndex.loginTab.rawValue :

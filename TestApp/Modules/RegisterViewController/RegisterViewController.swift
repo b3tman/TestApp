@@ -26,19 +26,13 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpButton.isEnabled = false
-        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(textDidChange(_:)),
                                                name: Notification.Name.UITextFieldTextDidChange,
                                                object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-    
-    //MARK: - Private helpers methods
+    //MARK: - Private methods
     
     private func validate(_ textField: UITextField) -> (Bool, String?) {
         guard let text = textField.text else { return (false, nil) }
@@ -79,7 +73,7 @@ class RegisterViewController: UIViewController {
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         guard let url = URL(string: "http://junior.balinasoft.com/api/account/signup") else { return }
         let parameters = ["login" : "\(loginTextField.text!)",
-            "password" : "\(confirmPasswordTextField.text!)"]
+                       "password" : "\(confirmPasswordTextField.text!)"]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -101,6 +95,8 @@ class RegisterViewController: UIViewController {
     
     
 }
+
+//MARK: - Extension UITextFieldDelegate
 
 extension RegisterViewController: UITextFieldDelegate {
     

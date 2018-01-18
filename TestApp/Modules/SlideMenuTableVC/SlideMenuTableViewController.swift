@@ -12,16 +12,5 @@ class SlideMenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //tableView.contentInsetAdjustmentBehavior = .never
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-
-    
-
 }
